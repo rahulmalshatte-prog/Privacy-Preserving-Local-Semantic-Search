@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy-Preserving Semantic Search</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <h1>Privacy-Preserving Semantic Search</h1>
+            <p>Search your local documents by meaning.</p>
+        </header>
+
+
+        <!-- UPLOAD DOCUMENT SECTION -->
+        <section class="card">
+
+            <h2>Upload Document</h2>
+
+            <input
+                type="file"
+                id="fileInput"
+                accept=".pdf,.docx,.txt"
+            >
+
+            <button
+                type="button"
+                id="uploadButton"
+            >
+                Upload Document
+            </button>
+
+            <p id="uploadStatus"></p>
+
+        </section>
+
+
+        <!-- SEARCH DOCUMENTS SECTION -->
+        <section class="card">
+
+            <h2>Search Documents</h2>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Ask something about your documents..."
+                >
+
+                <select id="documentTypeFilter">
+
+                    <option value="all">All Documents</option>
+
+                    <option value="PDF">PDF</option>
+
+                    <option value="DOCX">DOCX</option>
+
+                    <option value="TXT">TXT</option>
+
+                </select>
+
+                <button
+                    type="button"
+                    id="searchButton"
+                >
+                    Search
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH RESULTS SECTION -->
+        <section class="card">
+
+            <h2>Search Results</h2>
+
+            <div id="resultsContainer">
+
+                <p class="empty-message">
+                    Search results will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH HISTORY SECTION -->
+        <section class="card">
+
+            <div class="section-header">
+
+                <h2>Search History</h2>
+
+                <button
+                    id="clearHistoryButton"
+                    type="button"
+                >
+                    Clear History
+                </button>
+
+            </div>
+
+            <div id="searchHistory">
+
+                <p class="empty-message">
+                    No search history available.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- UPLOADED DOCUMENTS SECTION -->
+        <section class="card">
+
+            <h2>Uploaded Documents</h2>
+
+            <div id="documents">
+
+                <p class="empty-message">
+                    Loading documents...
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
